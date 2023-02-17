@@ -2,45 +2,105 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity, ImageBackground, S
 
 import React, { useState } from 'react';
 
-export default function OSBirth({navigation}) {
+export default function EPIHealthWorkerReg({navigation}) {
 
-  const [id, setId] = useState('');
+  const [fname, setfName]= useState('');
+  const [lname, setlName]= useState('');
+  const [CNIC, setCNIC] = useState('');
+  const [email, setEmail]= useState('');
+  const [password, setPassword] = useState('');
+  const [phone, setPhone] = useState('');
+  const [showPassword, setShowPassword] = useState(true);
+  const [hid, setHId] = useState('');
   const [hname, sethName]= useState('');
-  const [province, setProvince] = useState('');
-  const [city, setCity] = useState('');
-  const [address, setAddress] = useState('');
 
   return (
     <View style={styles.container}>
-      
-      <ImageBackground source={require('../Admin/assets/funky-lines.png')} style={{ width: '100%', height: '100%' }}>
       <ScrollView>
+      <ImageBackground source={require('./assets/funky-lines.png')} style={{ width: '100%', height: '100%' }}>
       <View style={styles.card}>
-      <Text style={styles.heading}>Birth Records</Text>
+      <Text style={styles.heading}>Healthcare Worker Registration</Text>
+      <Text style={styles.headingdesc}>Register new Healthcare Worker</Text>
       <View style={styles.inputContainer}>
           <TextInput
             style={styles.input}
-            placeholder="Enter Id"
-            onChangeText={text => setId(text)}
-            value={id}
+            autoComplete='name'
+            placeholder="First Name"
+            onChangeText={text => setfName(text)}
+            value={fname}
           />
         </View>
-        <TouchableOpacity style={styles.button2} onPress={() => navigation.navigate('BirthData')}>
-          <Text style={styles.buttonText}>Search Records</Text>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            autoComplete='name'
+            placeholder="Last Name"
+            onChangeText={text => setlName(text)}
+            value={lname}
+          />
+        </View>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            autoComplete='email'
+            placeholder="Email"
+            onChangeText={text => setEmail(text)}
+            value={email}
+          />
+        </View>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="Password"
+            onChangeText={text => setPassword(text)}
+            value={password}
+            secureTextEntry={showPassword ? true : false}
+          />
+        </View>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="CNIC"
+            onChangeText={text => setCNIC(text)}
+            value={CNIC}
+            keyboardType="numeric"
+          />
+        </View>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            autoComplete='tel'
+            placeholder="Phone"
+            onChangeText={text => setPhone(text)}
+            value={phone}
+            keyboardType="phone-pad"
+          />
+        </View>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="Hospital Id"
+            onChangeText={text => setHId(text)}
+            value={hid}
+          />
+        </View>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="Hospital Name"
+            onChangeText={text => sethName(text)}
+            value={hname}
+          />
+        </View>
+        <TouchableOpacity style={styles.button3} onPress={() => setShowPassword(!showPassword)}>
+        <Text style={styles.buttonText}>{showPassword ? 'Show Password' : 'Hide Password'}</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button2} onPress={() => navigation.navigate('BirthData')}>
-          <Text style={styles.buttonText}>View All Records</Text>
+        <TouchableOpacity style={styles.button2} onPress={() => navigation.navigate('AdminDashboard')}>
+          <Text style={styles.buttonText}>Register</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button2} onPress={() => navigation.navigate('AddBirth')}>
-          <Text style={styles.buttonText}>Add New Record</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button2} onPress={() => navigation.navigate('DelBirth')}>
-          <Text style={styles.buttonText}>Delete Record</Text>
-        </TouchableOpacity>
-        
       </View>
-      </ScrollView>
       </ImageBackground>
+      </ScrollView>
     </View>
   );
 }

@@ -2,32 +2,40 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity, ImageBackground, S
 
 import React, { useState } from 'react';
 
-export default function AddBirth({navigation}) {
+export default function EPIAssignVaccine({navigation}) {
 
-  const [id, setId] = useState('');
+  const [hid, setHId] = useState('');
+  const [vaccine, setVaccine]= useState('');
 
   return (
     <View style={styles.container}>
-      
-      <ImageBackground source={require('../Admin/assets/funky-lines.png')} style={{ width: '100%', height: '100%' }}>
       <ScrollView>
+      <ImageBackground source={require('./assets/funky-lines.png')} style={{ width: '100%', height: '100%' }}>
       <View style={styles.card}>
-      <Text style={styles.heading}>Add New Birth Records</Text>
+      <Text style={styles.heading}>Assign Vacccine</Text>
+      <Text style={styles.headingdesc}>Assign Vacccine to Healthcare Worker</Text>
       <View style={styles.inputContainer}>
           <TextInput
             style={styles.input}
-            placeholder="Enter Id"
-            onChangeText={text => setId(text)}
-            value={id}
+            placeholder="Vaccine"
+            onChangeText={text => setVaccine(text)}
+            value={vaccine}
           />
         </View>
-        <TouchableOpacity style={styles.button2} >
-          <Text style={styles.buttonText}>Add Records</Text>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="Healthcare Worker Id"
+            onChangeText={text => setHId(text)}
+            value={hid}
+          />
+        </View>
+        <TouchableOpacity style={styles.button2} onPress={() => navigation.navigate('EPIDashboard')}>
+          <Text style={styles.buttonText}>Assign Vaccine</Text>
         </TouchableOpacity>
-        
       </View>
-      </ScrollView>
       </ImageBackground>
+      </ScrollView>
     </View>
   );
 }

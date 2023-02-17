@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity, ImageBackground, S
 
 import React, { useState } from 'react';
 
-export default function AddVaccine({navigation}) {
+export default function OSDelVaccine({navigation}) {
 
   const [id, setId] = useState('');
 
@@ -12,7 +12,7 @@ export default function AddVaccine({navigation}) {
       <ImageBackground source={require('../Admin/assets/funky-lines.png')} style={{ width: '100%', height: '100%' }}>
       <ScrollView>
       <View style={styles.card}>
-      <Text style={styles.heading}>Add New Birth Records</Text>
+      <Text style={styles.heading}>Delete Birth Records</Text>
       <View style={styles.inputContainer}>
           <TextInput
             style={styles.input}
@@ -21,8 +21,9 @@ export default function AddVaccine({navigation}) {
             value={id}
           />
         </View>
+
         <TouchableOpacity style={styles.button2} >
-          <Text style={styles.buttonText}>Add Records</Text>
+          <Text style={styles.buttonText}>Delete Record</Text>
         </TouchableOpacity>
         
       </View>
@@ -113,42 +114,12 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       fontSize: 16,
     },
-    button: {
-      marginTop: 20,
-      backgroundColor: '#0066cc',
-      borderRadius: 10,
-      padding: 15,
-      width: '80%',
-      shadowColor: '#000',
-      shadowOffset: {
-        width: 0,
-        height: 2,
-      },
-      shadowOpacity: 0.25,
-      shadowRadius: 3.84,
-      elevation: 5,
-    },
     button2: {
       marginTop: 20,
       backgroundColor: 'green',
       borderRadius: 10,
       padding: 15,
       width: '80%',
-      shadowColor: '#000',
-      shadowOffset: {
-        width: 0,
-        height: 2,
-      },
-      shadowOpacity: 0.25,
-      shadowRadius: 3.84,
-      elevation: 5,
-    },
-    button3: {
-      marginTop: 15,
-      backgroundColor: 'grey',
-      borderRadius: 50,
-      padding: 5,
-      width: '42%',
       shadowColor: '#000',
       shadowOffset: {
         width: 0,

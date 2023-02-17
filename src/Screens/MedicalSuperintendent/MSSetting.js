@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-nativ
 
 import React, { useState } from 'react';
 
-export default function MedicalSupSetting({navigation}) {
+export default function MSSetting({navigation}) {
  
   return (
     

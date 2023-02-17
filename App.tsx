@@ -25,12 +25,19 @@ import MedicalSup from './src/Screens/Admin/MedicalSup';
 import OSBirth from './src/Screens/OperatingStaff/OSBirth';
 import OSDashboard from './src/Screens/OperatingStaff/OSDashboard';
 import OSVaccine from './src/Screens/OperatingStaff/OSVaccine';
-import AddBirth from './src/Screens/OperatingStaff/AddBirth';
-import DelBirth from './src/Screens/OperatingStaff/DelBirth';
-import AddVaccine from './src/Screens/OperatingStaff/AddVaccine';
-import BirthData from './src/Screens/OperatingStaff/BirthData';
-import DelVaccine from './src/Screens/OperatingStaff/DelVaccine';
-import VaccineData from './src/Screens/OperatingStaff/VaccineData';
+import OSAddBirth from './src/Screens/OperatingStaff/OSAddBirth';
+import OSDelBirth from './src/Screens/OperatingStaff/OSDelBirth';
+import OSAddVaccine from './src/Screens/OperatingStaff/OSAddVaccine';
+import OSBirthData from './src/Screens/OperatingStaff/OSBirthData';
+import OSDelVaccine from './src/Screens/OperatingStaff/OSDelVaccine';
+import OSVaccineData from './src/Screens/OperatingStaff/OSVaccineData';
+import MSVaccineStockData from './src/Screens/MedicalSuperintendent/MSVaccineStockData';
+import MSDashboard from './src/Screens/MedicalSuperintendent/MSDashboard';
+import MSOperatingStaff from './src/Screens/MedicalSuperintendent/MSOperatingStaff';
+import MSOperatingStaffData from './src/Screens/MedicalSuperintendent/MSOperatingStaffData';
+import MSOperatingStaffReg from './src/Screens/MedicalSuperintendent/MSOperatingStaffReg';
+import MSSetting from './src/Screens/MedicalSuperintendent/MSSetting';
+import MSVaccineStock from './src/Screens/MedicalSuperintendent/MSVaccineStock';
 
 const Stack = createNativeStackNavigator();
 
@@ -60,12 +67,20 @@ export default function App() {
         <Stack.Screen name="OSDashboard" component={OSDashboard} options={{ headerShown: false, title: 'OSDashboard' }}/>
         <Stack.Screen name="OSBirth" component={OSBirth} options={{ headerShown: false, title: 'OSBirth' }}/>
         <Stack.Screen name="OSVaccine" component={OSVaccine} options={{ headerShown: false, title: 'OSVaccine' }}/>
-        <Stack.Screen name="AddBirth" component={AddBirth} options={{ headerShown: false, title: 'AddBirth' }}/>
-        <Stack.Screen name="DelBirth" component={DelBirth} options={{ headerShown: false, title: 'DelBirth' }}/>
-        <Stack.Screen name="BirthData" component={BirthData} options={{ headerShown: false, title: 'BirthData' }}/>
-        <Stack.Screen name="VaccineData" component={VaccineData} options={{ headerShown: false, title: 'VaccineData' }}/>
-        <Stack.Screen name="AddVaccine" component={AddVaccine} options={{ headerShown: false, title: 'AddVaccine' }}/>
-        <Stack.Screen name="DelVaccine" component={DelVaccine} options={{ headerShown: false, title: 'DelVaccine' }}/>
+        <Stack.Screen name="OSAddBirth" component={OSAddBirth} options={{ headerShown: false, title: 'OSAddBirth' }}/>
+        <Stack.Screen name="OSDelBirth" component={OSDelBirth} options={{ headerShown: false, title: 'OSDelBirth' }}/>
+        <Stack.Screen name="OSBirthData" component={OSBirthData} options={{ headerShown: false, title: 'OSBirthData' }}/>
+        <Stack.Screen name="OSVaccineData" component={OSVaccineData} options={{ headerShown: false, title: 'OSVaccineData' }}/>
+        <Stack.Screen name="OSAddVaccine" component={OSAddVaccine} options={{ headerShown: false, title: 'OSAddVaccine' }}/>
+        <Stack.Screen name="OSDelVaccine" component={OSDelVaccine} options={{ headerShown: false, title: 'OSDelVaccine' }}/>
+        <Stack.Screen name="MSVaccineStockData" component={MSVaccineStockData} options={{ headerShown: false, title: 'MSVaccineStockData' }}/>
+        <Stack.Screen name="MSDashboard" component={MSDashboard} options={{ headerShown: false, title: 'MSDashboard' }}/>
+        <Stack.Screen name="MSOperatingStaff" component={MSOperatingStaff} options={{ headerShown: false, title: 'MSOperatingStaff' }}/>
+        <Stack.Screen name="MSOperatingStaffData" component={MSOperatingStaffData} options={{ headerShown: false, title: 'MSOperatingStaffData' }}/>
+        <Stack.Screen name="MSOperatingStaffReg" component={MSOperatingStaffReg} options={{ headerShown: false, title: 'MSOperatingStaffReg' }}/>
+        <Stack.Screen name="MSSetting" component={MSSetting} options={{ headerShown: false, title: 'MSSetting' }}/>
+        <Stack.Screen name="MSVaccineStock" component={MSVaccineStock} options={{ headerShown: false, title: 'MSVaccineStock' }}/>
+        
       </Stack.Navigator>
     </NavigationContainer>
   );

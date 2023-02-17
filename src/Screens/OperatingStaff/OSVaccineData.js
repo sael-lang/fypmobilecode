@@ -10,7 +10,7 @@ const persons = [
   }
 ];
 
-export default function BirthData({navigation}) {
+export default function OSVaccineData({navigation}) {
 
   const myItemSeparator = () => {
     return <View style={{ height: 1, backgroundColor: "grey",marginHorizontal:10}} />;
@@ -36,7 +36,7 @@ return (
       ListEmptyComponent={myListEmpty}
       ListHeaderComponent={() => (
         <Text style={{ fontSize: 30, textAlign: "center",marginTop:20,fontWeight:'bold',textDecorationLine: 'underline' }}>
-          Birth Details
+          Vaccine Details
         </Text>
       )}
       ListFooterComponent={() => (

@@ -2,45 +2,40 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity, ImageBackground, S
 
 import React, { useState } from 'react';
 
-export default function OSBirth({navigation}) {
+export default function EPIAssignRegion({navigation}) {
 
-  const [id, setId] = useState('');
-  const [hname, sethName]= useState('');
-  const [province, setProvince] = useState('');
-  const [city, setCity] = useState('');
-  const [address, setAddress] = useState('');
+  const [hid, setHId] = useState('');
+  const [region, setRegion]= useState('');
 
   return (
     <View style={styles.container}>
-      
-      <ImageBackground source={require('../Admin/assets/funky-lines.png')} style={{ width: '100%', height: '100%' }}>
       <ScrollView>
+      <ImageBackground source={require('./assets/funky-lines.png')} style={{ width: '100%', height: '100%' }}>
       <View style={styles.card}>
-      <Text style={styles.heading}>Birth Records</Text>
+      <Text style={styles.heading}>Assign Vacccine</Text>
+      <Text style={styles.headingdesc}>Assign Vacccine to Healthcare Worker</Text>
       <View style={styles.inputContainer}>
           <TextInput
             style={styles.input}
-            placeholder="Enter Id"
-            onChangeText={text => setId(text)}
-            value={id}
+            placeholder="Region"
+            onChangeText={text => setRegion(text)}
+            value={region}
           />
         </View>
-        <TouchableOpacity style={styles.button2} onPress={() => navigation.navigate('BirthData')}>
-          <Text style={styles.buttonText}>Search Records</Text>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="Healthcare Worker Id"
+            onChangeText={text => setHId(text)}
+            value={hid}
+          />
+        </View>
+        <TouchableOpacity style={styles.button2} onPress={() => navigation.navigate('EPIDashboard')}>
+          <Text style={styles.buttonText}>Assign Region</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button2} onPress={() => navigation.navigate('BirthData')}>
-          <Text style={styles.buttonText}>View All Records</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button2} onPress={() => navigation.navigate('AddBirth')}>
-          <Text style={styles.buttonText}>Add New Record</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button2} onPress={() => navigation.navigate('DelBirth')}>
-          <Text style={styles.buttonText}>Delete Record</Text>
-        </TouchableOpacity>
-        
       </View>
-      </ScrollView>
       </ImageBackground>
+      </ScrollView>
     </View>
   );
 }

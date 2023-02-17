@@ -40,8 +40,8 @@ export default function Start({navigation}) {
       <TouchableOpacity style={styles.signupBtn} onPress={() => navigation.navigate('MedicalSupReg')}>
         <Text style={styles.loginText}>MedicalSupReg</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.signupBtn} onPress={() => navigation.navigate('HospitalReg')}>
-        <Text style={styles.loginText}>HospitalReg</Text>
+      <TouchableOpacity style={styles.signupBtn} onPress={() => navigation.navigate('MSDashboard')}>
+        <Text style={styles.loginText}>MSDashboard</Text>
       </TouchableOpacity>
     </View>
   );

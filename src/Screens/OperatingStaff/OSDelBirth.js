@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity, ImageBackground, S
 
 import React, { useState } from 'react';
 
-export default function DelBirth({navigation}) {
+export default function OSDelBirth({navigation}) {
 
   const [id, setId] = useState('');
 
